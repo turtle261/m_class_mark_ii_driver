@@ -13,7 +13,7 @@ jobs:
     runs-on: macos-latest
     steps:
       - name: Checkout source
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Install build dependencies
         run: |
@@ -33,7 +33,7 @@ jobs:
           tar -czf m_class_mark_ii_driver_macos.tar.gz -C dist .
 
       - name: Upload build artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: m_class_mark_ii_driver_macos
           path: m_class_mark_ii_driver_macos.tar.gz
