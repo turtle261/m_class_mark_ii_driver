@@ -1,0 +1,173 @@
+*PPD-Adobe: "4.3"
+*%%%% PPD file for M-Class Mark II with CUPS.
+*%%%% Created by the CUPS PPD Compiler CUPS v2.4.12.
+*FormatVersion: "4.3"
+*FileVersion: "2.0"
+*LanguageVersion: English
+*LanguageEncoding: ISOLatin1
+*PCFileName: "DMX_MII.PPD"
+*Product: "(M-Class Mark II)"
+*Manufacturer: "Datamax-Oneil"
+*ModelName: "Datamax-Oneil M-Class Mark II"
+*ShortNickName: "Datamax-Oneil M-Class Mark II"
+*NickName: "Datamax-Oneil M-Class Mark II, 2.0"
+*PSVersion: "(3010.000) 0"
+*LanguageLevel: "3"
+*ColorDevice: False
+*DefaultColorSpace: Gray
+*FileSystem: False
+*Throughput: "1"
+*LandscapeOrientation: Plus90
+*TTRasterizer: Type42
+*% Driver-defined attributes...
+*cupsVersion: 2.4
+*cupsModelNumber: 77
+*cupsManualCopies: False
+*cupsFilter: "application/vnd.cups-raster 100 rastertodpl"
+*cupsLanguages: "en"
+*OpenUI *PageSize/Media Size: PickOne
+*OrderDependency: 10 AnySetup *PageSize
+*DefaultPageSize: 25x53mm.Fullbleed
+*PageSize 4x6in.Fullbleed/Label 4in x 6in: "<</PageSize[288 432]/ImagingBBox null>>setpagedevice"
+*PageSize 25x53mm.Fullbleed/small Label - 25mm*53mm: "<</PageSize[71 150]/ImagingBBox null>>setpagedevice"
+*CloseUI: *PageSize
+*OpenUI *PageRegion/Media Size: PickOne
+*OrderDependency: 10 AnySetup *PageRegion
+*DefaultPageRegion: 25x53mm.Fullbleed
+*PageRegion 4x6in.Fullbleed/Label 4in x 6in: "<</PageSize[288 432]/ImagingBBox null>>setpagedevice"
+*PageRegion 25x53mm.Fullbleed/small Label - 25mm*53mm: "<</PageSize[71 150]/ImagingBBox null>>setpagedevice"
+*CloseUI: *PageRegion
+*DefaultImageableArea: 25x53mm.Fullbleed
+*ImageableArea 4x6in.Fullbleed/Label 4in x 6in: "0 0 288 432"
+*ImageableArea 25x53mm.Fullbleed/small Label - 25mm*53mm: "0 0 70.866142272949 150.236221313477"
+*DefaultPaperDimension: 25x53mm.Fullbleed
+*PaperDimension 4x6in.Fullbleed/Label 4in x 6in: "288 432"
+*PaperDimension 25x53mm.Fullbleed/small Label - 25mm*53mm: "70.866142272949 150.236221313477"
+*MaxMediaWidth: "294.803161621094"
+*MaxMediaHeight: "7197.16552734375"
+*HWMargins: 0 0 0 0
+*CustomPageSize True: "pop pop pop <</PageSize[5 -2 roll]/ImagingBBox null>>setpagedevice"
+*ParamCustomPageSize Width: 1 points 31.861417770386 294.803161621094
+*ParamCustomPageSize Height: 2 points 36 7197.16552734375
+*ParamCustomPageSize WidthOffset: 3 points 0 0
+*ParamCustomPageSize HeightOffset: 4 points 0 0
+*ParamCustomPageSize Orientation: 5 int 0 0
+*OpenUI *Resolution/Resolution: PickOne
+*OrderDependency: 10 AnySetup *Resolution
+*DefaultResolution: 300dpi
+*Resolution 203dpi/203dpi: "<</HWResolution[203 203]/cupsBitsPerColor 1/cupsRowCount 0/cupsRowFeed 0/cupsRowStep 0/cupsColorSpace 3>>setpagedevice"
+*Resolution 300dpi/300dpi: "<</HWResolution[300 300]/cupsBitsPerColor 1/cupsRowCount 0/cupsRowFeed 0/cupsRowStep 0/cupsColorSpace 3>>setpagedevice"
+*CloseUI: *Resolution
+*OpenUI *MediaType/Media Type: PickOne
+*OrderDependency: 10 DocumentSetup *MediaType
+*DefaultMediaType: default
+*MediaType default/Printer Default: ""
+*MediaType Thermal/Thermal Transfer Media: "<</MediaType(Thermal)>>setpagedevice"
+*MediaType Direct/Direct Thermal Media: "<</MediaType(Direct)>>setpagedevice"
+*CloseUI: *MediaType
+*OpenUI *MediaClass/Media Class: PickOne
+*OrderDependency: 10 DocumentSetup *MediaClass
+*DefaultMediaClass: default
+*MediaClass default/Printer Default: ""
+*MediaClass Continuous/Continuous Roll: "<<MediaClass(Continuous)>>setpagedevice"
+*MediaClass LabelsEdge/Labels (hole/gap sensor): "<<MediaClass(LabelsEdge)>>setpagedevice"
+*MediaClass LablesMark/Labels (black mark sensor): "<<MediaClass(LablesMark)>>setpagedevice"
+*CloseUI: *MediaClass
+*OpenGroup: PrinterSettings/Printer Settings
+*OpenUI *Darkness/Darkness: PickOne
+*OrderDependency: 10 DocumentSetup *Darkness
+*DefaultDarkness: 10
+*Darkness 1/1: "<</cupsCompression 1>>setpagedevice"
+*Darkness 2/2: "<</cupsCompression 2>>setpagedevice"
+*Darkness 3/3: "<</cupsCompression 3>>setpagedevice"
+*Darkness 4/4: "<</cupsCompression 4>>setpagedevice"
+*Darkness 5/5: "<</cupsCompression 5>>setpagedevice"
+*Darkness 6/6: "<</cupsCompression 6>>setpagedevice"
+*Darkness 7/7: "<</cupsCompression 7>>setpagedevice"
+*Darkness 8/8: "<</cupsCompression 8>>setpagedevice"
+*Darkness 9/9: "<</cupsCompression 9>>setpagedevice"
+*Darkness 10/10: "<</cupsCompression 10>>setpagedevice"
+*Darkness 11/11: "<</cupsCompression 11>>setpagedevice"
+*Darkness 12/12: "<</cupsCompression 12>>setpagedevice"
+*Darkness 13/13: "<</cupsCompression 13>>setpagedevice"
+*Darkness 14/14: "<</cupsCompression 14>>setpagedevice"
+*Darkness 15/15: "<</cupsCompression 15>>setpagedevice"
+*Darkness 16/16: "<</cupsCompression 16>>setpagedevice"
+*Darkness 17/17: "<</cupsCompression 17>>setpagedevice"
+*Darkness 18/18: "<</cupsCompression 18>>setpagedevice"
+*Darkness 19/19: "<</cupsCompression 19>>setpagedevice"
+*Darkness 20/20: "<</cupsCompression 20>>setpagedevice"
+*Darkness 21/21: "<</cupsCompression 21>>setpagedevice"
+*Darkness 22/22: "<</cupsCompression 22>>setpagedevice"
+*Darkness 23/23: "<</cupsCompression 23>>setpagedevice"
+*Darkness 24/24: "<</cupsCompression 24>>setpagedevice"
+*Darkness 25/25: "<</cupsCompression 25>>setpagedevice"
+*Darkness 26/26: "<</cupsCompression 26>>setpagedevice"
+*Darkness 27/27: "<</cupsCompression 27>>setpagedevice"
+*Darkness 28/28: "<</cupsCompression 28>>setpagedevice"
+*Darkness 29/29: "<</cupsCompression 29>>setpagedevice"
+*Darkness 30/30: "<</cupsCompression 30>>setpagedevice"
+*CloseUI: *Darkness
+*OpenUI *DPLPrintSpeed/DPLPrintSpeed: PickOne
+*OrderDependency: 10 DocumentSetup *DPLPrintSpeed
+*DefaultDPLPrintSpeed: K
+*DPLPrintSpeed K/6.0 ips (Default): "10"
+*DPLPrintSpeed C/2.0 ips: "2"
+*DPLPrintSpeed G/4.0 ips: "6"
+*DPLPrintSpeed S/10.0 ips: "18"
+*CloseUI: *DPLPrintSpeed
+*OpenUI *dplPeelingPosition/Peeling (Cutting) Position Adjust: PickOne
+*OrderDependency: 10 DocumentSetup *dplPeelingPosition
+*DefaultdplPeelingPosition:   0mm
+*dplPeelingPosition unset/unset: "<</AdvanceDistance -1>>setpagedevice"
+*dplPeelingPosition   0mm/  0mm: "<</AdvanceDistance 0>>setpagedevice"
+*dplPeelingPosition  10mm/ 10mm: "<</AdvanceDistance 100>>setpagedevice"
+*dplPeelingPosition  20mm/ 20mm: "<</AdvanceDistance 200>>setpagedevice"
+*dplPeelingPosition  30mm/ 30mm: "<</AdvanceDistance 300>>setpagedevice"
+*dplPeelingPosition  40mm/ 40mm: "<</AdvanceDistance 400>>setpagedevice"
+*dplPeelingPosition  50mm/ 50mm: "<</AdvanceDistance 500>>setpagedevice"
+*dplPeelingPosition  60mm/ 60mm: "<</AdvanceDistance 600>>setpagedevice"
+*dplPeelingPosition  70mm/ 70mm: "<</AdvanceDistance 700>>setpagedevice"
+*dplPeelingPosition  80mm/ 80mm: "<</AdvanceDistance 800>>setpagedevice"
+*dplPeelingPosition  90mm/ 90mm: "<</AdvanceDistance 900>>setpagedevice"
+*dplPeelingPosition 100mm/100mm: "<</AdvanceDistance 1000>>setpagedevice"
+*dplPeelingPosition 1118/10mm (max): "<</AdvanceDistance 1118>>setpagedevice"
+*CloseUI: *dplPeelingPosition
+*CloseGroup: PrinterSettings
+*DefaultFont: Courier
+*Font AvantGarde-Book: Standard "(1.05)" Standard ROM
+*Font AvantGarde-BookOblique: Standard "(1.05)" Standard ROM
+*Font AvantGarde-Demi: Standard "(1.05)" Standard ROM
+*Font AvantGarde-DemiOblique: Standard "(1.05)" Standard ROM
+*Font Bookman-Demi: Standard "(1.05)" Standard ROM
+*Font Bookman-DemiItalic: Standard "(1.05)" Standard ROM
+*Font Bookman-Light: Standard "(1.05)" Standard ROM
+*Font Bookman-LightItalic: Standard "(1.05)" Standard ROM
+*Font Courier: Standard "(1.05)" Standard ROM
+*Font Courier-Bold: Standard "(1.05)" Standard ROM
+*Font Courier-BoldOblique: Standard "(1.05)" Standard ROM
+*Font Courier-Oblique: Standard "(1.05)" Standard ROM
+*Font Helvetica: Standard "(1.05)" Standard ROM
+*Font Helvetica-Bold: Standard "(1.05)" Standard ROM
+*Font Helvetica-BoldOblique: Standard "(1.05)" Standard ROM
+*Font Helvetica-Narrow: Standard "(1.05)" Standard ROM
+*Font Helvetica-Narrow-Bold: Standard "(1.05)" Standard ROM
+*Font Helvetica-Narrow-BoldOblique: Standard "(1.05)" Standard ROM
+*Font Helvetica-Narrow-Oblique: Standard "(1.05)" Standard ROM
+*Font Helvetica-Oblique: Standard "(1.05)" Standard ROM
+*Font NewCenturySchlbk-Bold: Standard "(1.05)" Standard ROM
+*Font NewCenturySchlbk-BoldItalic: Standard "(1.05)" Standard ROM
+*Font NewCenturySchlbk-Italic: Standard "(1.05)" Standard ROM
+*Font NewCenturySchlbk-Roman: Standard "(1.05)" Standard ROM
+*Font Palatino-Bold: Standard "(1.05)" Standard ROM
+*Font Palatino-BoldItalic: Standard "(1.05)" Standard ROM
+*Font Palatino-Italic: Standard "(1.05)" Standard ROM
+*Font Palatino-Roman: Standard "(1.05)" Standard ROM
+*Font Symbol: Special "(001.005)" Special ROM
+*Font Times-Bold: Standard "(1.05)" Standard ROM
+*Font Times-BoldItalic: Standard "(1.05)" Standard ROM
+*Font Times-Italic: Standard "(1.05)" Standard ROM
+*Font Times-Roman: Standard "(1.05)" Standard ROM
+*Font ZapfChancery-MediumItalic: Standard "(1.05)" Standard ROM
+*Font ZapfDingbats: Special "(001.005)" Special ROM
+*% End of DMX_MII.PPD, 08815 bytes.

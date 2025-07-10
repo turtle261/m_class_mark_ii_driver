@@ -1,0 +1,123 @@
+// Include standard font and media definitions
+#include <font.defs>
+#include <media.defs>
+#include <raster.defs>
+
+// List the fonts that are supported, in this case all standard
+// fonts...
+Font *
+
+// Manufacturer, model name, and version
+Manufacturer "Datamax-Oneil"
+ModelName "M-Class Mark II"
+
+
+ModelNumber 77
+DriverType custom
+Version 2.0
+
+// Each filter provided by the driver...
+Filter application/vnd.cups-raster 100 rastertodpl
+
+// HWMargins left bottom right top
+HWMargins 0 0 0 0
+MinSize 11.24mm 12.7mm
+MaxSize 104mm 2539mm
+VariablePaperSize Yes
+
+// Peel off / eject position  0..1118  1/10mm ; -1:off
+#define PEEL_DIST 1118
+#define MAX_PEEL_DIST 1118
+
+// Primary default media size: 4x6 inch label
+#media "4x6in.Fullbleed/Label 4in x 6in" 101.6mm 152.4mm
+*MediaSize 4x6in.Fullbleed
+
+// Additional supported media sizes
+#media "25x53mm.Fullbleed/small Label - 25mm*53mm" 25mm 53mm
+*MediaSize 25x53mm.Fullbleed
+
+Attribute DefaultColorSpace "" Gray
+ColorDevice No
+// Supported resolutions
+*Resolution k 1 0 0 0 203dpi
+*Resolution k 1 0 0 0 300dpi
+
+// Specify the name of the PPD file we want to generate...
+PCFileName "DMX_MII.PPD"
+
+
+Group "General/General"
+	Option "MediaType/Media Type" PickOne DocumentSetup 10
+	*Choice "default/Printer Default" ""
+	Choice "Thermal/Thermal Transfer Media" "<</MediaType(Thermal)>>setpagedevice"
+	Choice "Direct/Direct Thermal Media" "<</MediaType(Direct)>>setpagedevice"
+
+	Option "MediaClass/Media Class" PickOne DocumentSetup 10
+	*Choice "default/Printer Default" ""
+	Choice "Continuous/Continuous Roll" "<<MediaClass(Continuous)>>setpagedevice"
+	Choice "LabelsEdge/Labels (hole/gap sensor)" "<<MediaClass(LabelsEdge)>>setpagedevice"
+    Choice "LablesMark/Labels (black mark sensor)" "<<MediaClass(LablesMark)>>setpagedevice"
+
+Group "PrinterSettings/Printer Settings"
+    Option "Darkness" PickOne DocumentSetup 10
+	Choice "1/1" "<</cupsCompression 1>>setpagedevice"
+	Choice "2/2" "<</cupsCompression 2>>setpagedevice"
+	Choice "3/3" "<</cupsCompression 3>>setpagedevice"
+	Choice "4/4" "<</cupsCompression 4>>setpagedevice"
+	Choice "5/5" "<</cupsCompression 5>>setpagedevice"
+	Choice "6/6" "<</cupsCompression 6>>setpagedevice"
+	Choice "7/7" "<</cupsCompression 7>>setpagedevice"
+	Choice "8/8" "<</cupsCompression 8>>setpagedevice"
+	Choice "9/9" "<</cupsCompression 9>>setpagedevice"
+	*Choice "10/10" "<</cupsCompression 10>>setpagedevice"
+	Choice "11/11" "<</cupsCompression 11>>setpagedevice"
+	Choice "12/12" "<</cupsCompression 12>>setpagedevice"
+	Choice "13/13" "<</cupsCompression 13>>setpagedevice"
+	Choice "14/14" "<</cupsCompression 14>>setpagedevice"
+	Choice "15/15" "<</cupsCompression 15>>setpagedevice"
+	Choice "16/16" "<</cupsCompression 16>>setpagedevice"
+	Choice "17/17" "<</cupsCompression 17>>setpagedevice"
+	Choice "18/18" "<</cupsCompression 18>>setpagedevice"
+	Choice "19/19" "<</cupsCompression 19>>setpagedevice"
+	Choice "20/20" "<</cupsCompression 20>>setpagedevice"
+	Choice "21/21" "<</cupsCompression 21>>setpagedevice"
+	Choice "22/22" "<</cupsCompression 22>>setpagedevice"
+	Choice "23/23" "<</cupsCompression 23>>setpagedevice"
+	Choice "24/24" "<</cupsCompression 24>>setpagedevice"
+	Choice "25/25" "<</cupsCompression 25>>setpagedevice"
+	Choice "26/26" "<</cupsCompression 26>>setpagedevice"
+	Choice "27/27" "<</cupsCompression 27>>setpagedevice"
+	Choice "28/28" "<</cupsCompression 28>>setpagedevice"
+	Choice "29/29" "<</cupsCompression 29>>setpagedevice"
+	Choice "30/30" "<</cupsCompression 30>>setpagedevice"
+
+    Option "DPLPrintSpeed" PickOne DocumentSetup 10
+    *Choice "K/6.0 ips (Default)" "10"
+    Choice "C/2.0 ips" "2"
+    Choice "G/4.0 ips" "6"
+    Choice "S/10.0 ips" "18"
+
+    Option "dplPeelingPosition/Peeling (Cutting) Position Adjust" PickOne DocumentSetup 10
+#if ( PEEL_DIST < 0 )
+	*Choice "unset" "<</AdvanceDistance -1>>setpagedevice"
+#else
+  #if ( PEEL_DIST <= MAX_PEEL_DIST )
+	Choice "unset" "<</AdvanceDistance -1>>setpagedevice"
+	*Choice "  0mm" "<</AdvanceDistance 0>>setpagedevice"
+	Choice " 10mm" "<</AdvanceDistance 100>>setpagedevice"
+	Choice " 20mm" "<</AdvanceDistance 200>>setpagedevice"
+	Choice " 30mm" "<</AdvanceDistance 300>>setpagedevice"
+	Choice " 40mm" "<</AdvanceDistance 400>>setpagedevice"
+	Choice " 50mm" "<</AdvanceDistance 500>>setpagedevice"
+	Choice " 60mm" "<</AdvanceDistance 600>>setpagedevice"
+	Choice " 70mm" "<</AdvanceDistance 700>>setpagedevice"
+	Choice " 80mm" "<</AdvanceDistance 800>>setpagedevice"
+	Choice " 90mm" "<</AdvanceDistance 900>>setpagedevice"
+	Choice "100mm" "<</AdvanceDistance 1000>>setpagedevice"
+	Choice "$MAX_PEEL_DIST/10mm (max)" "<</AdvanceDistance $MAX_PEEL_DIST>>setpagedevice"
+  #else
+	Choice "unset" "<</AdvanceDistance -1>>setpagedevice"
+	*Choice "$MAX_PEEL_DIST/max" "<</AdvanceDistance $MAX_PEEL_DIST>>setpagedevice"
+  #endif
+#endif
