@@ -31,3 +31,11 @@ sudo rm /usr/libexec/cups/filter/rastertodpl
 sudo rm /Library/Printers/PPDs/Contents/Resources/dmx_mii.ppd
 sudo launchctl kickstart -kp system/org.cups.cupsd # Restart CUPS Printing Service
 ```
+
+## Troubleshooting
+1. Try this.
+```bash
+sudo launchctl stop org.cups.cupsd
+sudo launchctl start org.cups.cupsd
+```
+2. If that doesn't work. Reboot.
